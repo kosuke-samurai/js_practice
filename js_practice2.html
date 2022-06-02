@@ -1,0 +1,126 @@
+<script>
+
+    //11
+    function countDown(n) {
+        const count = [];
+        for (i = 0; i < n; i++) {
+            count.push(n - i)
+        }
+        console.log(count);
+    }
+
+    console.log(countDown(3)); // 3 2 1
+    console.log(countDown(10)); // 10 9 8 7 6 5 4 3 2 1
+
+    //12
+    function getOneToN(s, n) {
+        const arry = s.substring(0, n);
+        console.log(arry);
+    }
+
+    console.log(getOneToN("aabbccdd", 5)); // aabbc
+    console.log(getOneToN("gsacademyfukuoka", 9)); // gsacademy
+
+    //13
+    //詰み
+    function getMaxAndMin(s) {
+        const array = s.split(/\s+/);
+        console.log(array);
+        const max = Math.max(array)
+        const little = Math.min(array)
+        console.log(max);
+        console.log(little);
+    }
+
+    console.log(getMaxAndMin("9 12 3 6 10")); // 12 3
+    console.log(getMaxAndMin("1 1 2 2 3")); // 3 1
+    console.log(getMaxAndMin("5 9 -1 10 2")); // 10 -1
+
+    //14
+    function getNthChar(s, n) {
+        const arry = s.substring((n - 1), n);
+        console.log(arry);
+    }
+
+    console.log(getNthChar("gsacademy", 3)); // a
+    console.log(getNthChar("abcdefg", 5)); // e
+    console.log(getNthChar("qwertyu", 1)); // q
+
+    //15
+    function isEqual(s, t) {
+        if (s === t) {
+            console.log("Yes");
+        } else {
+            console.log("No");
+        }
+    }
+
+    console.log(isEqual("gsacademy", "gsacademy")); // Yes
+    console.log(isEqual("JavaScript", "ジャバスク")); // No
+    console.log(isEqual("aaaaa", "aaaaaa")); // No
+
+    //16
+    function getNumberOfA(s) {
+        const array = s.split('');
+        //console.log(array);
+        const Numb = {
+            acount: 0,
+        }
+        for (i = 1; i < s.length; i++) {
+            if (array[i] === "A") {
+                Numb["acount"]++;
+            }
+        }
+        console.log(Numb["acount"]);
+    }
+
+    console.log(getNumberOfA("GSACADEMY")); // 2
+    console.log(getNumberOfA("aAaAaA")); // 3
+    console.log(getNumberOfA("JavaScript")); // 0
+
+
+    //17
+    function getSurfaceArea(a) {
+        console.log(a * a * 6);
+    }
+
+    console.log(getSurfaceArea(4)); // 96
+    console.log(getSurfaceArea(1)); // 6
+
+
+    //18
+    function getAngle(a, b) {
+        console.log(180 - (a + b));
+    }
+
+    console.log(getAngle(30, 90)); // 60
+    console.log(getAngle(45, 45)); // 90
+
+
+    //19
+    function zeroPadding3(n) {
+        const sanketa = ('000' + n).slice(-3);
+        console.log(sanketa);
+    }
+
+    console.log(zeroPadding3(98)); // 098
+    console.log(zeroPadding3(2)); // 002
+
+    //20
+    function getPaidHolidays(s) {
+        const array = s.split(/\s+/);
+        //console.log(array);
+        const Numb = {
+            acount: 0,
+        }
+        for (i = 1; i < s.length; i++) {
+            if (array[i] === "no") {
+                Numb["acount"]++;
+            }
+        }
+        console.log(Numb["acount"]);
+    }
+
+    console.log(getPaidHolidays("yes yes yes yes no no yes")); // 2
+    console.log(getPaidHolidays("yes no no no no no yes")); // 5
+</script>

@@ -1,0 +1,104 @@
+<script>
+    //21
+    function getSum(n) {
+        let sum = 0;
+        for (let i = 1; i <= n; i++) {
+            sum = sum + i;
+        }
+        console.log(sum);
+    }
+
+    console.log(getSum(10)); // 55
+    console.log(getSum(99)); // 4950
+
+    //22
+    function getNumberOfDigits(n) {
+        console.log(String(n).length);
+    }
+
+    console.log(getNumberOfDigits(100)); // 3
+    console.log(getNumberOfDigits(114514)); // 6
+
+    //23
+    function getBackSide(n) {
+        console.log(7 - n);
+    }
+    console.log(getBackSide(1)); // 6
+    console.log(getBackSide(3)); // 4
+
+    //24
+    function convertToSeconds(n) {
+        console.log(n * 60);
+    }
+
+    console.log(convertToSeconds(16)); // 960
+    console.log(convertToSeconds(3)); // 180
+
+    //25
+    function getTimeUntilFull(n) {
+        console.log(100 - n);
+    }
+
+    console.log(getTimeUntilFull(70)); // 30
+    console.log(getTimeUntilFull(25)); // 75
+
+    //26
+    function getInitialFromName(s) {
+        const array = s.split(/\s+/);
+        //console.log(array);
+        const sin = [];
+        for (i = 0; i < array.length; i++) {
+            sin.push(array[i].substring(0, 1));
+        }
+        const fin = sin.join(".");
+        console.log(fin);
+    }
+
+    console.log(getInitialFromName("Dio Brando")); // D.B
+    console.log(getInitialFromName("Pannacotta Fugo")); // P.F
+    console.log(getInitialFromName("Gyro Zeppeli")); // G.Z
+
+    //27
+    function choiceOfGod(n) {
+        const menu = Math.floor(Math.random() * (n + 1 - 1)) + 1;
+        console.log(menu);
+    }
+
+    console.log(choiceOfGod(4)); // 1
+    console.log(choiceOfGod(3)); // 3
+
+    //28
+    function formatYMD(s) {
+        const array = s.split(/\s+/);
+        const year = array.join("/");
+        console.log(year);
+
+    }
+
+    console.log(formatYMD("2021 1 1")); // 2021/01/01
+    console.log(formatYMD("2020 10 10")); // 2020/10/10
+    console.log(formatYMD("794 11 29")); // 0794/11/29
+
+
+    //29
+
+    function convertAtToAtMark(s) {
+
+        const result = s.replace(/at/g, "@");
+        console.log(result);
+
+    }
+
+    console.log(convertAtToAtMark("gsatcodeatquantity")); // gs@code@quantity
+    console.log(convertAtToAtMark("atatatjojoatatat")); // @@@jojo@@@
+
+
+    //30
+    function getNeedBox(m, n) {
+        console.log(Math.floor(n / m) + 1);
+    }
+
+    console.log(getNeedBox(7, 30)); // 5
+    console.log(getNeedBox(3, 100)); // 34
+    console.log(getNeedBox(7, 5)); // 1
+</script>
