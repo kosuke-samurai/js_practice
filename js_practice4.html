@@ -1,0 +1,77 @@
+<script>
+
+    //31
+    function canStoreBooks(s) {
+        const arry = s.split(/\s+/);
+        if (arry[1] * arry[2] >= arry[0]) {
+            console.log("OK");
+        } else {
+            console.log("NG");
+        };
+    }
+
+    console.log(canStoreBooks("400 5 85")); // OK
+    console.log(canStoreBooks("500 4 70")); // NG
+
+
+    //32
+    function calculateNumberOfGames(n) {
+        console.log(n * (n - 1) / 2);
+    }
+
+    console.log(calculateNumberOfGames(4)); // 6
+    console.log(calculateNumberOfGames(10)); // 45
+
+
+    //33
+    function daysOfGoOut(s) {
+        const arry = s.split(/\s+/);
+        const count = {
+            holi: 0,
+        }
+        for (i = 0; i < arry.length; i++) {
+            if (arry[i] <= 30) {
+                count["holi"]++;
+            }
+        }
+        console.log(count["holi"]);
+    }
+
+    console.log(daysOfGoOut("13 0 15 30 89 100 30")); // 5
+    console.log(daysOfGoOut("0 14 18 22 0 2 4")); // 7
+    console.log(daysOfGoOut("99 99 99 99 99 99 99")); // 0
+
+    //34
+    function isEquilateralTriangle(s) {
+        const arry = s.split(/\s+/);
+        //console.log(arry);
+        if (arry[0] === arry[1] && arry[1] === arry[2]) {
+            console.log("Yes");
+        } else {
+            console.log("No");
+        }
+    }
+
+    console.log(isEquilateralTriangle("10 10 10")); // yes
+    console.log(isEquilateralTriangle("3 4 5")); // No
+
+
+    //35
+    function showWeather(n) {
+        if (0 <= n && n <= 30) {
+            console.log("sunny");
+        } else if (31 <= n && n <= 70) {
+            console.log("cloudy");
+        } else {
+            console.log("rainy");
+        };
+    }
+
+    console.log(showWeather(31)); // cloudy
+    console.log(showWeather(2)); // sunny
+    console.log(showWeather(71)); // rainy
+
+
+//36
+
+</script>
